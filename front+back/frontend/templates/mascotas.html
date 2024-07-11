@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Mascotas perdidas{% endblock %}
+
+{% block main %}
+
+    <section data-aos="fade-up" data-aos-duration="1000" class="contenido" id="perdidos">
+      <div class="perdidos">      
+        <h2 class="perdidosTitle">Perdidos Recientemente</h2>
+        <p >Una lista de mascotas perdidas recientemente.</p>
+      </div>
+      <div class="grillaPerdidos" id = "mascotas">
+      </div>
+      </section>
+
+{% endblock %}
+
+{% block jsad %} 
+<script src="{{ url_for('static', filename='js/mascotas.js') }}"></script>
+{% endblock %}
+
+<!--{% for i in range(1, 10) %}
+          <div class="grillaTarjeta">
+            <img class="grillaImagen" src="{{ url_for('static', filename='img/perdido'~ i ~'.jpeg') }}" />
+            <div class="grillaInfo">
+              <h3>Nombre: <a id="nombre"></a></h3>
+              <h3>Raza: <a id="raza"></a></h3>
+              <h3>Color: <a id="color"></a></h3>
+              <h3>Edad: <a id="edad"></a></h3>
+              <h3>Fecha de desaparición: <a id="fecha_desa"></a></h3>
+            </div>
+          </div>
+        {% endfor %} -->
